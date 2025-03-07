@@ -1,0 +1,228 @@
+<style>
+  .accordion {
+    background-color: {{ section.settings.primary_bg_color }};
+    padding: 64px 20px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    gap: 24px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0%;
+    flex-grow: 0;
+  }
+
+  .title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    color: {{ section.settings.primary_text_color }};
+    line-height: 120%;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: {{ section.settings.secondary_text_color }};
+  }
+
+  .button {
+    background-color: {{ section.settings.button_bg_color }};
+    color: {{ section.settings.button_text_color }};
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 150%;
+    font-weight: 400;
+  }
+
+  .accordion-item-title {
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .accordion {
+      padding: 112px 64px;
+      gap: 80px;
+      flex-direction: row;
+    }
+
+    .container {
+      width: 500px;
+      gap: 32px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 48px;
+    }
+
+    .description {
+      font-size: 18px;
+    }
+
+    .accordion-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: auto;
+    }
+
+    .accordion-item-title {
+      width: 100%;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+  }
+</style>
+
+<section class="accordion">
+  <div class="container">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    <p class="description">{{ section.settings.description }}</p>
+    <button class="button">{{ section.settings.button_text }}</button>
+  </div>
+  <article class="accordion-container">
+    {% for block in section.blocks %}
+      <details class="accordion-item">
+        <summary
+          style="border: 1px solid {{ block.settings.border_color }}; background-color: {{ block.settings.bg_color }}; color: {{ block.settings.text_color }};"
+          class="accordion-item-title"
+        >
+          {{ block.settings.title }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-plus"
+          >
+            <path d="M5 12h14"/><path d="M12 5v14"/>
+          </svg>
+        </summary>
+        <p class="accordion-item-content">{{ block.settings.content }}</p>
+      </details>
+    {% endfor %}
+  </article>
+</section>
+
+<script></script>
+
+{% schema %}
+{
+  "name": "Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "FAQs"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click me"
+    },
+    {
+      "type": "color",
+      "id": "primary_bg_color",
+      "label": "Primary Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "primary_text_color",
+      "label": "Primary Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "secondary_text_color",
+      "label": "Secondary Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Question 1 text goes here"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh."
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#5D3BE4"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion"
+    }
+  ]
+}
+{% endschema %}
