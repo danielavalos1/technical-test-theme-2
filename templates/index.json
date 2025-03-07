@@ -76,38 +76,82 @@
         "padding_bottom": 36
       }
     },
-    "accordion_AGdtFR": {
+    "accordion_akVahz": {
       "type": "accordion",
       "blocks": {
-        "accordion_item_Em8TiT": {
-          "type": "AccordionItem",
+        "accordion_item_fELiMr": {
+          "type": "accordion_item",
           "settings": {
-            "title": "Who is Monkey D Luffy?",
-            "content": "Monkey",
-            "bg_color": "#dfd4ff",
-            "text_color": "#312a51",
-            "border_color": "#ff1010"
+            "title": "Question 1 text goes here",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
+            "bg_color": "#5D3BE4",
+            "text_color": "#FFFFFF",
+            "border_color": "#FFFFFF"
+          }
+        },
+        "accordion_item_Wq6k3Q": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Question 1 text goes here",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
+            "bg_color": "#5D3BE4",
+            "text_color": "#FFFFFF",
+            "border_color": "#FFFFFF"
+          }
+        },
+        "accordion_item_WrfNtB": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Question 1 text goes here",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
+            "bg_color": "#5D3BE4",
+            "text_color": "#FFFFFF",
+            "border_color": "#FFFFFF"
+          }
+        },
+        "accordion_item_kL9H7a": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Question 1 text goes here",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
+            "bg_color": "#5D3BE4",
+            "text_color": "#FFFFFF",
+            "border_color": "#FFFFFF"
+          }
+        },
+        "accordion_item_yPn4XK": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Question 1 text goes here",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
+            "bg_color": "#5D3BE4",
+            "text_color": "#FFFFFF",
+            "border_color": "#FFFFFF"
           }
         }
       },
       "block_order": [
-        "accordion_item_Em8TiT"
+        "accordion_item_fELiMr",
+        "accordion_item_Wq6k3Q",
+        "accordion_item_WrfNtB",
+        "accordion_item_kL9H7a",
+        "accordion_item_yPn4XK"
       ],
       "settings": {
         "title": "FAQs",
-        "description": "This is an accordion section.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh.",
         "button_text": "Click me",
-        "primary_bg_color": "#ffffff",
-        "primary_text_color": "#5b35ea",
-        "secondary_text_color": "#5d3be4",
-        "button_bg_color": "#5d3be4",
-        "button_text_color": "#ffffff"
+        "primary_bg_color": "#FFFFFF",
+        "primary_text_color": "#000000",
+        "secondary_text_color": "#000000",
+        "button_bg_color": "#000000",
+        "button_text_color": "#FFFFFF"
       }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "accordion_AGdtFR"
+    "accordion_akVahz"
   ]
 }
